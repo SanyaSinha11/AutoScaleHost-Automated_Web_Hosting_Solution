@@ -12,6 +12,7 @@ AutoScaleHost is a powerful one-click Infrastructure as Code (IaC) platform to d
 - Interactive Deployment UI (Progress bar, status, logs, results)
 - Full-stack integration: HTML/CSS/JS (frontend) + Node.js (backend) + Terraform (infrastructure)
 
+
 ## 🌐 Tech Stack 
 | Layer         | Technology                        |
 | ------------- | --------------------------------- |
@@ -20,6 +21,7 @@ AutoScaleHost is a powerful one-click Infrastructure as Code (IaC) platform to d
 | Infra as Code | Terraform                         |
 | Cloud         | Microsoft Azure                   |
 | OS/Runtime    | Ubuntu 20.04 on Azure VMs, Apache |
+
 
 ## ✅ Prerequisites
 Before running AutoScaleHost, make sure the following tools are installed:
@@ -33,6 +35,7 @@ Also ensure you have:
 - An Azure subscription (here, we have used Student Subscription)
 - A Terraform Service Principal configured for authentication
 - Node & Terraform properly added to your system PATH
+
 
 ## 🖥️ How to Run 
 1. Clone repository
@@ -60,6 +63,7 @@ Also ensure you have:
    ```
    Visit the UI at: http://localhost:5000
 
+
 ## ⚙️ Deployment Flow
 1. Choose the environment (Dev/UAT/Prod) from the UI.
 2. Click "Deploy".
@@ -73,8 +77,10 @@ Also ensure you have:
    - Deployment time
    - Clickable website link
 
+
 ## 💻 UI
 <img width="1855" height="836" alt="image" src="https://github.com/user-attachments/assets/bd8f5748-5c7e-4486-b2a0-dbbfe3fec3f0" />
+
 
 ## 🧪 Customizing for Your System
 If you're running this project on your own system or server:
@@ -89,6 +95,7 @@ If you're running this project on your own system or server:
    - Terraform is installed in a non-default path
    - You want to modify environment logic or file structure
 
+
 ## 🐞 Troubleshooting
 | Problem                   | Solution                                                              |
 | ------------------------- | --------------------------------------------------------------------- |
@@ -102,6 +109,7 @@ cd terraform
 terraform init
 terraform apply -var-file="dev.tfvars"
 ```
+
 
 ## 🧾 License
 © 2025 AutoScaleHost. All rights reserved.
