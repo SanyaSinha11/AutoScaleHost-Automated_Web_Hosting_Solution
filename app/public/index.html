@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoScaleHost - Automated Web Hosting Solution</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>AutoScaleHost</h1>
+                        <p>One Click, Any Environment, Fully Deployed</p>
+                    </div>
+                </div>
+                <div class="azure-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Azure Infrastructure</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-container">
+        <!-- Main Card -->
+        <div class="main-card">
+            
+            <!-- Environment Selection -->
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-cog"></i>
+                    Environment Configuration
+                </h2>
+                
+                <div class="environment-grid">
+                    <div class="env-option" data-env="dev">
+                        <div class="env-icon dev-gradient">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="env-name">Development</div>
+                        <div class="env-instances">2 VM Instances</div>
+                    </div>
+                    
+                    <div class="env-option" data-env="uat">
+                        <div class="env-icon uat-gradient">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="env-name">UAT</div>
+                        <div class="env-instances">2 VM Instances</div>
+                    </div>
+                    
+                    <div class="env-option" data-env="prod">
+                        <div class="env-icon prod-gradient">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="env-name">Production</div>
+                        <div class="env-instances">3 VM Instances</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deployment Section -->
+            <div class="section">
+                <div class="deployment-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-bolt"></i>
+                        Deployment Control
+                    </h2>
+                    <div class="target-info">
+                        Target: <span id="selectedEnvName">Development</span>
+                    </div>
+                </div>
+
+                <!-- Deploy Button -->
+                <div class="deploy-button-container">
+                    <button id="deployButton" class="deploy-button">
+                        <i class="fas fa-cloud"></i>
+                        Deploy to <span id="deployButtonEnv">Development</span>
+                    </button>
+                </div>
+
+                <!-- Progress Bar -->
+                <div id="progressContainer" class="progress-container hidden">
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <div id="progressText" class="progress-text">0% Complete</div>
+                </div>
+            </div>
+
+            <!-- Deployment Results -->
+            <div id="deploymentResults" class="deployment-results hidden">
+                <div class="results-header">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Deployment Successful!</h3>
+                </div>
+                
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-label">Website URL</div>
+                        <a id="websiteUrl" href="#" target="_blank" class="result-link">
+                            <i class="fas fa-globe"></i>
+                            <span id="websiteUrlText"></span>
+                        </a>
+                    </div>
+                    
+                    <div class="result-item">
+                        <div class="result-label">Load Balancer IP</div>
+                        <div id="loadBalancerIp" class="result-value"></div>
+                    </div>
+                    
+                    <div class="result-item">
+                        <div class="result-label">VM Instances</div>
+                        <div id="vmInstances" class="result-value"></div>
+                    </div>
+                    
+                    <div class="result-item">
+                        <div class="result-label">Deployment Time</div>
+                        <div id="deploymentTime" class="result-value"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Infrastructure Diagram -->
+        <div id="infrastructureDiagram" class="infrastructure-diagram hidden">
+            <h3>Deployed Infrastructure</h3>
+            <div class="infrastructure-content">
+                <div class="infra-item">
+                    <div class="infra-icon lb-gradient">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="infra-name">Load Balancer</div>
+                    <div class="infra-type">Azure LB</div>
+                </div>
+                
+                <div class="infra-line"></div>
+                
+                <div id="vmContainer" class="vm-container">
+                    <!-- VM instances will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 AutoScaleHost. All rights reserved.</p>
+                <p>Made by SanyaSinha</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
