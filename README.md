@@ -1,4 +1,4 @@
-# AutoScaleHost ☁️
+# **AutoScaleHost** ☁️
 
 **Author:** Sanya Sinha
 AutoScaleHost is a powerful one-click Infrastructure as Code (IaC) platform to deploy scalable web hosting environments on Microsoft Azure using Terraform, wrapped in an intuitive frontend interface with a connected Node.js backend.
