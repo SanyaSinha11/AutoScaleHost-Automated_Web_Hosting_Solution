@@ -1,6 +1,25 @@
-.terraform/
 *.tfstate
 *.tfstate.*
 crash.log
 *.log
 *.exe
+
+# Local .terraform directories (plugins, modules, etc.)
+terraform/.terraform/
+
+# Terraform state files (store sensitive info like resource IDs)
+terraform/*.tfstate
+terraform/*.tfstate.*
+
+# Backup files
+terraform/*.backup
+terraform/*.tfvars      # Contains secrets, ignore actual vars files
+terraform/crash.log
+
+# Terraform plan output
+terraform/*.tfplan
+
+# Secret var files (keep a safe placeholder file instead)
+terraform/dev.tfvars
+terraform/uat.tfvars
+terraform/prod.tfvars
